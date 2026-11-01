@@ -1,0 +1,35 @@
+[
+  {
+    "practice": 1,
+    "home_status": 200,
+    "openapi_status": 200
+  },
+  {
+    "practice": 2,
+    "home_status": 200,
+    "openapi_status": 200
+  },
+  {
+    "practice": 3,
+    "home_status": 200,
+    "openapi_status": 200
+  },
+  {
+    "practice": 4,
+    "home_status": 200,
+    "openapi_status": 200
+  },
+  {
+    "practice": 5,
+    "home_status": 200,
+    "openapi_status": 200,
+    "index_status": {
+      "ready": true,
+      "chunks": 127,
+      "documents": 16,
+      "model": "intfloat/multilingual-e5-small"
+    },
+    "keyword_status": 200,
+    "top_source": "інструкція-навушники-оріон-x2.md"
+  }
+]

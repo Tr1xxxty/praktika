@@ -1,0 +1,32 @@
+[
+  {
+    "file": "astronaut.png",
+    "expected": {
+      "person": 1
+    }
+  },
+  {
+    "file": "chelsea.png",
+    "expected": {
+      "cat": 1
+    }
+  },
+  {
+    "file": "coffee.png",
+    "expected": {
+      "cup": 1,
+      "spoon": 1,
+      "dining table": 1
+    }
+  },
+  {
+    "file": "camera.png",
+    "expected": {
+      "person": 1
+    }
+  },
+  {
+    "file": "coins.png",
+    "expected": {}
+  }
+]

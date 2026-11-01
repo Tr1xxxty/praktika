@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Детекція обʼєктів</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; }
+    form { display: flex; gap: .5rem; align-items: center; margin: 1.5rem 0; flex-wrap: wrap; }
+    button { padding: .5rem 1rem; font-size: 1rem; cursor: pointer; }
+    #result { min-height: 3rem; white-space: pre-wrap; }
+    .error { color: #b00020; }
+  </style>
+</head>
+<body>
+  <h1>Детекція обʼєктів</h1>
+
+  <form id="detect-form">
+    <input id="image" type="file" name="image" accept="image/*" required>
+    <label>Поріг <input id="confidence" type="number" min="0" max="1" step="0.05" value="0.25" style="width:5em"></label>
+    <button type="submit">Знайти обʼєкти</button>
+  </form>
+
+  <canvas id="preview" style="max-width:100%"></canvas><div id="result"></div>
+
+  <script>
+    // Сторінка звертається до власного ендпоінта застосунку.
+    // Як показувати знайдені обʼєкти — списком, таблицею, рамками поверх
+    // зображення — на ваш розсуд.
+    const form = document.getElementById('detect-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const file = document.getElementById('image').files[0];
+      if (!file) return;
+
+      const data = new FormData();
+      data.append('image', file);
+      data.append('confidence', document.getElementById('confidence').value);
+
+      result.className = '';
+      result.textContent = 'Обробка…';
+
+      try {
+        const response = await fetch('/api/detect', { method: 'POST', body: data });
+        const payload = await response.json();
+
+        if (!response.ok) {
+          result.className = 'error';
+          result.textContent = 'Помилка: ' + JSON.stringify(payload);
+          return;
+        }
+
+        result.textContent = `Об'єктів: ${payload.count} · Час: ${payload.elapsed.toFixed(3)} с\n` +
+          payload.objects.map(o => `${o.class}: ${(o.confidence*100).toFixed(1)}% · [${o.box.map(x=>x.toFixed(0)).join(', ')}]`).join('\n');
+        const bitmap = await createImageBitmap(file);
+        const canvas = document.getElementById('preview');
+        canvas.width=payload.width; canvas.height=payload.height;
+        const ctx=canvas.getContext('2d');
+        ctx.drawImage(bitmap,0,0,canvas.width,canvas.height); bitmap.close();
+        ctx.strokeStyle='#00e060'; ctx.fillStyle='#00e060'; ctx.lineWidth=3;
+        ctx.font=`${Math.max(14,canvas.width/45)}px sans-serif`;
+        for(const o of payload.objects){const [x,y,x2,y2]=o.box;ctx.strokeRect(x,y,x2-x,y2-y);ctx.fillText(o.class,x,Math.max(20,y-5));}
+      } catch (error) {
+        result.className = 'error';
+        result.textContent = 'Не вдалося звернутися до сервера.';
+      }
+    });
+  </script>
+</body>
+</html>

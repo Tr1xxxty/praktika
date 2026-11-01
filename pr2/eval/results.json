@@ -1,0 +1,389 @@
+[
+  {
+    "file": "astronaut.png",
+    "threshold": 0.25,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.7142186760902405,
+        "box": [
+          5.249853610992432,
+          13.719775199890137,
+          363.4786682128906,
+          511.4056701660156
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 1.1827196700000968,
+    "width": 512,
+    "height": 512,
+    "confidence": 0.25,
+    "expected": {
+      "person": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "chelsea.png",
+    "threshold": 0.25,
+    "objects": [
+      {
+        "class": "cat",
+        "confidence": 0.8874366879463196,
+        "box": [
+          2.4964277744293213,
+          0.0,
+          431.25946044921875,
+          295.37359619140625
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.046313459999964834,
+    "width": 451,
+    "height": 300,
+    "confidence": 0.25,
+    "expected": {
+      "cat": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "coffee.png",
+    "threshold": 0.25,
+    "objects": [
+      {
+        "class": "cup",
+        "confidence": 0.9229256510734558,
+        "box": [
+          168.838623046875,
+          17.019289016723633,
+          423.23046875,
+          326.4908752441406
+        ]
+      },
+      {
+        "class": "dining table",
+        "confidence": 0.7156277298927307,
+        "box": [
+          0.43453213572502136,
+          1.153149962425232,
+          588.1080932617188,
+          393.05859375
+        ]
+      }
+    ],
+    "count": 2,
+    "elapsed": 0.034812611000006655,
+    "width": 600,
+    "height": 400,
+    "confidence": 0.25,
+    "expected": {
+      "cup": 1,
+      "spoon": 1,
+      "dining table": 1
+    },
+    "missing": {
+      "spoon": 1
+    },
+    "extra": {}
+  },
+  {
+    "file": "camera.png",
+    "threshold": 0.25,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.7872993350028992,
+        "box": [
+          1.3179199695587158,
+          62.416603088378906,
+          294.49737548828125,
+          512.0
+        ]
+      },
+      {
+        "class": "traffic light",
+        "confidence": 0.273306667804718,
+        "box": [
+          304.470947265625,
+          168.048583984375,
+          332.2272033691406,
+          232.5935516357422
+        ]
+      }
+    ],
+    "count": 2,
+    "elapsed": 0.045704435999823545,
+    "width": 512,
+    "height": 512,
+    "confidence": 0.25,
+    "expected": {
+      "person": 1
+    },
+    "missing": {},
+    "extra": {
+      "traffic light": 1
+    }
+  },
+  {
+    "file": "coins.png",
+    "threshold": 0.25,
+    "objects": [],
+    "count": 0,
+    "elapsed": 0.07776990400020622,
+    "width": 384,
+    "height": 303,
+    "confidence": 0.25,
+    "expected": {},
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "astronaut.png",
+    "threshold": 0.5,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.7142186760902405,
+        "box": [
+          5.249853610992432,
+          13.719775199890137,
+          363.4786682128906,
+          511.4056701660156
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.045514144999970085,
+    "width": 512,
+    "height": 512,
+    "confidence": 0.5,
+    "expected": {
+      "person": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "chelsea.png",
+    "threshold": 0.5,
+    "objects": [
+      {
+        "class": "cat",
+        "confidence": 0.8874366879463196,
+        "box": [
+          2.4964277744293213,
+          0.0,
+          431.25946044921875,
+          295.37359619140625
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.039880416999949375,
+    "width": 451,
+    "height": 300,
+    "confidence": 0.5,
+    "expected": {
+      "cat": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "coffee.png",
+    "threshold": 0.5,
+    "objects": [
+      {
+        "class": "cup",
+        "confidence": 0.9229256510734558,
+        "box": [
+          168.838623046875,
+          17.019289016723633,
+          423.23046875,
+          326.4908752441406
+        ]
+      },
+      {
+        "class": "dining table",
+        "confidence": 0.7156277298927307,
+        "box": [
+          0.43453213572502136,
+          1.153149962425232,
+          588.1080932617188,
+          393.05859375
+        ]
+      }
+    ],
+    "count": 2,
+    "elapsed": 0.04163372099992557,
+    "width": 600,
+    "height": 400,
+    "confidence": 0.5,
+    "expected": {
+      "cup": 1,
+      "spoon": 1,
+      "dining table": 1
+    },
+    "missing": {
+      "spoon": 1
+    },
+    "extra": {}
+  },
+  {
+    "file": "camera.png",
+    "threshold": 0.5,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.7872993350028992,
+        "box": [
+          1.3179199695587158,
+          62.416603088378906,
+          294.49737548828125,
+          512.0
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.045119864999833226,
+    "width": 512,
+    "height": 512,
+    "confidence": 0.5,
+    "expected": {
+      "person": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "coins.png",
+    "threshold": 0.5,
+    "objects": [],
+    "count": 0,
+    "elapsed": 0.030494127000110893,
+    "width": 384,
+    "height": 303,
+    "confidence": 0.5,
+    "expected": {},
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "astronaut.png",
+    "threshold": 0.75,
+    "objects": [],
+    "count": 0,
+    "elapsed": 0.03899577099991802,
+    "width": 512,
+    "height": 512,
+    "confidence": 0.75,
+    "expected": {
+      "person": 1
+    },
+    "missing": {
+      "person": 1
+    },
+    "extra": {}
+  },
+  {
+    "file": "chelsea.png",
+    "threshold": 0.75,
+    "objects": [
+      {
+        "class": "cat",
+        "confidence": 0.8874366879463196,
+        "box": [
+          2.4964277744293213,
+          0.0,
+          431.25946044921875,
+          295.37359619140625
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.026714486999935616,
+    "width": 451,
+    "height": 300,
+    "confidence": 0.75,
+    "expected": {
+      "cat": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "coffee.png",
+    "threshold": 0.75,
+    "objects": [
+      {
+        "class": "cup",
+        "confidence": 0.9229256510734558,
+        "box": [
+          168.838623046875,
+          17.019289016723633,
+          423.23046875,
+          326.4908752441406
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.02645711500008474,
+    "width": 600,
+    "height": 400,
+    "confidence": 0.75,
+    "expected": {
+      "cup": 1,
+      "spoon": 1,
+      "dining table": 1
+    },
+    "missing": {
+      "spoon": 1,
+      "dining table": 1
+    },
+    "extra": {}
+  },
+  {
+    "file": "camera.png",
+    "threshold": 0.75,
+    "objects": [
+      {
+        "class": "person",
+        "confidence": 0.7872993350028992,
+        "box": [
+          1.3179199695587158,
+          62.416603088378906,
+          294.49737548828125,
+          512.0
+        ]
+      }
+    ],
+    "count": 1,
+    "elapsed": 0.03713492799988671,
+    "width": 512,
+    "height": 512,
+    "confidence": 0.75,
+    "expected": {
+      "person": 1
+    },
+    "missing": {},
+    "extra": {}
+  },
+  {
+    "file": "coins.png",
+    "threshold": 0.75,
+    "objects": [],
+    "count": 0,
+    "elapsed": 0.029668653000044287,
+    "width": 384,
+    "height": 303,
+    "confidence": 0.75,
+    "expected": {},
+    "missing": {},
+    "extra": {}
+  }
+]
